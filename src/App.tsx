@@ -3,6 +3,8 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import { getUser, User } from './models/user';
+import WorkoutPage from './pages/workout';
+import LoginPage from './pages/login';
 
 
 export default function App() {
@@ -22,11 +24,11 @@ export default function App() {
     <div className="App">
       {user ? (
         <Switch>
-          <Route path="/" exact children={<div data-testid="workout-container"><h2>Home Page</h2></div>} />
+          <Route path="/" exact component={WorkoutPage} />
         </Switch>
       ) : (
         <Switch>
-          <Route path="/" exact children={<div data-testid="login-container"><h2>Login Page</h2></div>} />
+          <Route path="/" exact component={LoginPage} />
           <Route path="/" render={() => <Redirect to="/" />} />
         </Switch>
       )}
