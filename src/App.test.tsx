@@ -12,7 +12,7 @@ const testUser: User = {
     username: 'testuser',
     first_name: 'test',
     last_name: 'user'
-}
+};
 
 test('Renders workout page when getUser attempt returns user', async () => {
     const server: SetupServerApi = createMockServer(userUrl + 'me/', testUser);
