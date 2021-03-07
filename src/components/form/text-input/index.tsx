@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import './styles.scss'
-import { FieldData } from '../../../models/form'
+import './styles.scss';
+import { FieldData } from '../../../models/form';
 
 interface Props {
     fieldData: FieldData;
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function TextInput({ fieldData, width=null }: Props) {
-    const [text, setText] = useState<string>(fieldData.value)
+    const [text, setText] = useState<string>(fieldData.value);
 
     function update(t: string): void {
         console.log('re')
