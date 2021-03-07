@@ -11,7 +11,7 @@ export default function LoginLogo({ logoSize=200 }: Props) {
     return (
         <div id="login-logo-container">
             <img style={{ height: logoSize, width: logoSize }} alt="logo" src={logo} />
-            <h2>GymPad</h2>
+            <h2 style={{ color: 'mediumseagreen' }}>GymPad</h2>
         </div>
     );
 }
