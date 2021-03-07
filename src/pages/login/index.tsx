@@ -1,5 +1,7 @@
 import React from 'react';
+import MultiColumn from '../../components/layout/multi-column';
 import WidthControl from '../../components/layout/width-control';
+import { ColumnOptions } from '../../models/layout';
 
 export default function LoginPage() {
     return (

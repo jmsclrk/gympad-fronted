@@ -21,7 +21,7 @@ test('Renders workout page when getUser attempt returns user', async () => {
     await waitFor(() => screen.getAllByTestId('workout-container'));
     expect(screen.getByTestId('workout-container')).toBeInTheDocument();
     killMockServer(server);
-})
+});
 
 test('Renders login page when getUser attempt fails', async () => {
     const server: SetupServerApi = createMockServer(userUrl + 'me/', testUser, 401);
@@ -30,4 +30,4 @@ test('Renders login page when getUser attempt fails', async () => {
     await waitFor(() => screen.getAllByTestId('login-container'));
     expect(screen.getByTestId('login-container')).toBeInTheDocument();
     killMockServer(server);
-})
+});
