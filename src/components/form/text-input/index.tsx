@@ -19,6 +19,7 @@ export default function TextInput({ fieldData, width=null }: Props) {
     return (
         <div className="form-text-input-container">
             <input
+                data-testid="form-text-input"
                 className="form-text-input"
                 style={width ? { width: width } : {}}
                 placeholder={fieldData.key}
