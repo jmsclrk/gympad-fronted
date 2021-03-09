@@ -12,9 +12,8 @@ export default function TextInput({ fieldData, width=null }: Props) {
     const [text, setText] = useState<string>(fieldData.value);
 
     function update(t: string): void {
-        console.log('re')
-        setText(t)
-        fieldData.value = t
+        setText(t);
+        fieldData.value = t;
     }
 
     return (
