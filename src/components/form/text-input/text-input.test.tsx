@@ -16,8 +16,8 @@ test('Passes field data to correct input props', () => {
 
 test('Changing input value updates FieldData value', () => {
     const testFieldData: FieldData = { key: 'test', value: '', type: 'text' };
-    render(<TextInput fieldData={testFieldData} />)
+    render(<TextInput fieldData={testFieldData} />);
     const input = screen.getByTestId('form-text-input');
-    fireEvent.change(input, { target: { value: 'TEST' } })
-    expect(testFieldData.value).toBe('TEST')
+    fireEvent.change(input, { target: { value: 'TEST' } });
+    expect(testFieldData.value).toBe('TEST');
 });
